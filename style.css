@@ -1,0 +1,17 @@
+:root {
+    --color-1:#F0F2F5;
+    --color-2:#D4DAE3;
+    --color-3:#B8C3D1;
+    --color-4:#9CABBF;
+    --color-5:#8094AC;
+    --color-6:#657C9A;
+    --color-7:#53667F;
+    --color-8:#404F63;
+    --color-9:#2E3947;
+    --color-10:#1B2129;
+    --color-11:#0A0C0F;
+}
+
+.logo {
+    height: 20 ;
+} 
