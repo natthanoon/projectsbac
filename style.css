@@ -1,24 +1,194 @@
-/* code color */
+/* ==========================================
+   1. ตั้งค่าโค้ดสี (Color Variables) และฟอนต์
+   ========================================== */
 :root {
-    --color-1:#F0F2F5;
-    --color-2:#D4DAE3;
-    --color-3:#B8C3D1;
-    --color-4:#9CABBF;
-    --color-5:#8094AC;
-    --color-6:#657C9A;
-    --color-7:#53667F;
-    --color-8:#404F63;
-    --color-9:#2E3947;
-    --color-10:#1B2129;
-    --color-11:#0A0C0F;
-}
-/* font */
-body {
-    font-family: "Open Sans", sans-serif;
+    --color-1: #F0F2F5;
+    --color-2: #D4DAE3;
+    --color-3: #B8C3D1;
+    --color-4: #9CABBF;
+    --color-5: #8094AC;
+    --color-6: #657C9A;
+    --color-7: #53667F;
+    --color-8: #404F63;
+    --color-9: #2E3947;
+    --color-10: #1B2129;
+    --color-11: #0A0C0F;
 }
 
-header {
+/* ล้างค่าเริ่มต้นของเบราว์เซอร์ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* กำหนดฟอนต์และสีพื้นหลังของเว็บ */
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--color-1);
+    color: var(--color-10);
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   2. ส่วนหัวของเว็บไซต์ (Header Styles)
+   ========================================== */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* จัดโลโก้ไว้ซ้าย เมนูไว้ขวา */
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* โลโก้ */
+.shop-logo h1 {
+    font-size: 24px;
+    color: var(--color-9);
+}
+
+.shop-logo h1 span {
+    color: var(--color-6);
+}
+
+/* เมนูนำทาง */
+.navigation-menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.navigation-menu ul li {
+    margin: 0 15px;
+}
+
+.navigation-menu .menu-link {
+    text-decoration: none;
+    color: var(--color-7);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navigation-menu .menu-link:hover, 
+.navigation-menu .menu-link.active {
+    color: var(--color-10);
+}
+
+
+/* ==========================================
+   3. ส่วนแบนเนอร์ใหญ่ (Hero Section Styles)
+   ========================================== */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-9), var(--color-6));
+    color: #ffffff;
+    padding: 80px 0;
     text-align: center;
-    background-color:var(--color-2);
-    color: var(--color-8);
+}
+
+.hero-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-1);
+    opacity: 0.9;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: var(--color-10);
+    color: #ffffff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.hero-button:hover {
+    background-color: var(--color-11);
+}
+
+
+/* ==========================================
+   4. ส่วนเนื้อหาหลักกลางเว็บ (Main Content Styles)
+   ========================================== */
+.main-content {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.content-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.section-title {
+    font-size: 28px;
+    color: var(--color-9);
+    margin-bottom: 15px;
+}
+
+.section-message {
+    color: var(--color-5);
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   5. ส่วนท้ายเว็บไซต์ (Footer Styles)
+   ========================================== */
+.main-footer {
+    background-color: var(--color-10);
+    color: var(--color-4);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-text {
+    margin-bottom: 10px;
+}
+
+.footer-links .footer-link {
+    color: var(--color-4);
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer-links .footer-link:hover {
+    color: #ffffff;
 }
